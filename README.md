@@ -6,3 +6,6 @@ a demo of netease news implemented by ionic
 
 ## Run
 ```npm start```
+
+## Live Demo
+<a href="https://gentle-mesa-3983.herokuapp.com/">https://gentle-mesa-3983.herokuapp.com/</a>
