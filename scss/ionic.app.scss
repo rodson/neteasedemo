@@ -1,0 +1,102 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+$positive: #D41D29;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.scroll-tabs {
+}
+
+.circle-icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border: 1px solid #fff;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+#nav-bar {
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  padding-left: 8px;
+  padding-right: 36px;
+
+  .scroll-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .more-item {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    line-height: 40px;
+    right: 0;
+    border: none;
+    top: 1px;
+    bottom: 1px;
+    padding: 0 6px;
+    background-color: #F6F6F6;
+  }
+}
+
+.scroll-tabs {
+  white-space: nowrap;
+  height: 40px;
+  line-height: 40px;
+
+  a.category {
+    padding: 0 8px;
+    color: #666;
+    text-decoration: none;
+    display: inline-block;
+
+    &.active {
+      color: $positive;
+      font-size: 15px;
+    }
+  }
+}
+
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+  border-style: solid;
+  border-width: 2px 0 0 0;
+  border-color: #444; }
+
+.tabs-striped.tabs-stable .tab-item.tab-item-active, .tabs-striped.tabs-stable .tab-item.active, .tabs-striped.tabs-stable .tab-item.activated {
+    margin-top: 0px;
+    color: $positive;
+    border: none;}
+
+    a.tab-item.tab-item-active {
+      color: $positive;
+    }
+
+

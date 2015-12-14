@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane ng-controller="AppCtrl">
+      <ion-header-bar align-title="center" class="bar-positive">
+        <div class="circle-icon">
+          <a href="#/app/twentyfour">24</a>
+        </div>
+        <h1 class="title">&#x7F51;&#x6613;</h1>
+        <button class="button button-icon icon ion-ios-crop"></button>
+      </ion-header-bar>
+      <ion-header-bar id="nav-bar" class="bar-subheader bar-stable">
+        <div class="scroll-container">
+          <div class="scroll-tabs">
+            <a href="" ng-repeat="category in categories" class="category" ng-class="{active: selectedCategory == category}" on-tap="selectCategory(category)">{{ category }}</a>
+          </div>
+        </div>
+        <button class="more-item icon ion-ios-arrow-down"></button>
+      </ion-header-bar>
+      <ion-tabs class="tabs-stable tabs-icon-top">
+        <ion-tab title="&#x65B0;&#x95FB;" icon-on="ion-ios-list" icon-off="ion-ios-list-outline">
+        </ion-tab>
+        <ion-tab title="&#x9605;&#x8BFB;" icon-on="ion-ios-book" icon-off="ion-ios-book-outline">
+        </ion-tab>
+        <ion-tab title="&#x89C6;&#x542C;" icon-on="ion-ios-navigate" icon-off="ion-ios-navigate-outline">
+        </ion-tab>
+        <ion-tab title="&#x53D1;&#x73B0;" icon-on="ion-ios-lightbulb" icon-off="ion-ios-lightbulb-outline">
+        </ion-tab>
+        <ion-tab title="&#x6211;" icon-on="ion-ios-person" icon-off="ion-ios-person-outline">
+        </ion-tab>
+      </ion-tabs>
+
+      <ion-content>
+        <div class="list card" ng-repeat="new in news">
+          <div class="item item-avatar">
+            <img ng-src="{{ new.avatar }}">
+            <h2>{{ new.title }}</h2>
+            <p>{{ new.description }}</p>
+          </div>
+          <div class="item item-image">
+            <img ng-src="{{ new.post }}">
+          </div>
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
